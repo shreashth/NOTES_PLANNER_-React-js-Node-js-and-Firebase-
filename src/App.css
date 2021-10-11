@@ -1,38 +1,143 @@
-.App {
+
+
+body,html {
+ 
+
+  margin: 0;
+  bottom: 0;
+}
+
+
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly])
+{
+
+  border-color: #ec407a;
+
+  box-shadow:  none;
+
+
+}
+
+
+
+#root{
+  
+  /* border: 2px solid red; */
+  min-height: 99vh;
+  max-height: auto;
+
+  min-width: 98vw;
+  max-width: 99vw;
+  
+  background-color: whitesmoke;
+}
+
+
+.container {    
+ 
+  background-image: url('https://placekitten.com/1200/800');
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+  border: 0.1px solid ;
+  min-height:  100vh;
+  max-height: auto;
+  min-width:100%;
+  margin-top:0;
+  
+}
+
+/* .container .signinContainer{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+} */
+
+
+
+
+
+#dashboardDefault {
+  margin-top: 5%;
+  z-index: inherit;
+  color: blueviolet;
+  /* background : url("https://media.istockphoto.com/photos/white-paper-background-picture-id1040425512?b=1&k=20&m=1040425512&s=170667a&w=0&h=mo6rWtHjzwQCJuwcBjRBzPuSzvZ-iDWqpAHDDrXETOg=") ; */
+
+  background-color: #eee;
+  font-family: 'Roboto Mono', monospace;
+transform: scale(0);
+  padding:10px;
+  font-size: small;
+  font-weight: 200;
+  /* border: solid 5px black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height:100%;
   text-align: center;
+  /* position: absolute; */
+/* border-radius:5%; */
+transform: scale(1);
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#dashboardDefault:hover{
+
+  transform: scale(1.05);
+  transition:1s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+
+#projectSummaryButton{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#deleteButton{
+  
+  /* display: none; */
+  /* size:5px; */
+  padding: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 20%;
+  background:none;
+  color: black;
+
+}
+
+
+
+
+
+
+.loader{
+  /* background-image: url('https://placekitten.com/1200/800'); */
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  min-width:50%;
+  min-height:  100vh;
+  max-height: auto;
+  max-width:100%;
+  /* margin-top:10%; */
 }
